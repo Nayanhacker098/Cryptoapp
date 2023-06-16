@@ -1,0 +1,177 @@
+:root {
+  --blue-color: #1677ff;
+  --light-blue: #e6f7ff;
+  --dark-blue: #001529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: var(--blue-color) !important;
+}
+
+.app {
+  display: flex;
+  overflow: hidden;
+
+  // Navbar As A Sidebar Styling
+  .navbar {
+    width: 15%;
+    background: var(--dark-blue);
+
+    .nav-icons {
+      display: none;
+    }
+
+    .nav-container {
+      position: fixed;
+      left: 0;
+      margin: 0;
+      padding: 2rem;
+      height: 100vh;
+      background: var(--dark-blue);
+
+      .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-list {
+        background: var(--dark-blue) !important;
+        color: #e6f7ff !important;
+        margin-left: 0.5rem;
+
+        a,
+        svg {
+          font-size: 1.1rem !important;
+        }
+      }
+    }
+  }
+
+  // Main Screen Styling Here
+  .main {
+    width: 85%;
+
+    .layout {
+      padding: 1rem 4rem;
+    }
+
+    .home-title-container {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .hor-line{
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      // margin: 10px 0;
+      margin-top: 10px;
+    }
+
+    // Cryptocurrencies Pages Styling start Here
+    .search-crypto {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .input {
+        width: 300px;
+        padding: 0.5rem;
+        margin: 1rem;
+        font-size: 1.1rem
+      }
+    }
+
+    // News Page Styling Start Here
+    .news-card {
+      .new-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+      }
+
+      .provider-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .footer {
+      background-color: #001529;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+    }
+  }
+
+  .exchange-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/maintaince\ page.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media screen and (max-width: 820px) {
+    .navbar {
+      width: 40px;
+      height: 40px;
+      background: var(--dark-blue);
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .nav-container {
+        display: none;
+      }
+
+      .nav-icons {
+        display: block;
+        position: fixed;
+        z-index: 2;
+        color: #fff !important;
+        font-size: 1.8rem;
+      }
+
+      .active-nav {
+        position: fixed;
+        z-index: 1;
+        top: 0%;
+        width: 100%;
+        background: var(--dark-blue);
+        color: var(--blue-color);
+        text-align: center;
+        display: block;
+      }
+
+      .nav-list {
+        width: 100%;
+        margin: auto !important;
+      }
+    }
+
+    .main {
+      width: 100%;
+
+      .layout {
+        padding: 4.5rem 1.5rem;
+      }
+    }
+
+  }
+}
